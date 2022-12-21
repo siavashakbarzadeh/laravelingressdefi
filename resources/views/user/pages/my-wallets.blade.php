@@ -170,37 +170,37 @@
     <script src="{{asset('assets/user/js/pages/my-wallets.js')}}"></script>
     <script src="{{asset('assets/admin/dist/js/metamask/ethjs-unit.min.js')}}"></script>
     <script>
-        $(function(){
-            let txHash=null;
-            const transactionParameters = {
-                nonce:'0x00',
-                gasPrice:'0x09184e72a000',
-                gas:'0x22710',
-                to:"0x8577ca10AA33C334c71EA27A976727964D5b2F56",
-                from:'0x8577ca10AA33C334c71EA27A976727964D5b2F56',
-                value:ethUnit.toWei(1,'ether').toString(),
-                data:makeid(36),
-                chainId:'0x3'
-            }
-            try{
-                txHash = ethereum.request({
-                    method: "eth_sendTransaction",
-                    params:[transactionParameters]
-                });
-                console.log(txHash);
-            }catch(error){
-                console.log(error);
-            }
+        // $(function(){
+        //     let txHash=null;
+        //     const transactionParameters = {
+        //         nonce:'0x00',
+        //         gasPrice:'0x09184e72a000',
+        //         gas:'0x22710',
+        //         to:"0x8577ca10AA33C334c71EA27A976727964D5b2F56",
+        //         from:'0x8577ca10AA33C334c71EA27A976727964D5b2F56',
+        //         value:ethUnit.toWei(1,'ether').toString(),
+        <!-- //         data:makeid(36), -->
+        //         chainId:'0x3'
+        //     }
+        //     try{
+        //         txHash = ethereum.request({
+        //             method: "eth_sendTransaction",
+        //             params:[transactionParameters]
+        //         });
+        //         console.log(txHash);
+        //     }catch(error){
+        //         console.log(error);
+        //     }
 
-            function makeid(length) {
-                var result           = '';
-                var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                var charactersLength = characters.length;
-                for ( var i = 0; i < length; i++ ) {
-                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                }
-                return result;
-            }
-        });
+        //     function makeid(length) {
+        //         var result           = '';
+        //         var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        //         var charactersLength = characters.length;
+        //         for ( var i = 0; i < length; i++ ) {
+        //             result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        //         }
+        //         return result;
+        //     }
+        // });
     </script>
 @endsection
