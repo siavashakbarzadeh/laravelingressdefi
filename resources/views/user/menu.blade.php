@@ -87,7 +87,7 @@
                                     <img src="{{ isset(Auth::user()->photo) ? cdnAsset(IMG_USER_VIEW_PATH,Auth::user()->photo) : Avatar::create(Auth::user()->first_name.' '.Auth::user()->last_name)->toBase64()}}" alt="{{__('main.user')}}">
                                     <span class="user-verified-badge position-absolute"><i class="fas fa-check"></i></span>
                                 </span>
-                                    <span class="navbar-user-name font-semi-bold font-18">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</span>
+                                    <span class="navbar-user-name font-semi-bold font-18">{{Auth::user()->first_name}} {{Auth::user()->last_name}} <span style="font-size:xx-small">{{Auth::user()->eth_address}}</span> </span>
                                 </button>
                                 <div class="dropdown-menu {{session()->has('lang_dir') && session()->get('lang_dir') == 'rtl' ? 'direction-rtl dropdown-menu-left' : 'dropdown-menu-right'}}" aria-labelledby="userNavbarDropdown">
                                     <div class="navbarUserDropdownInner d-flex align-items-center">
@@ -95,7 +95,7 @@
                                             <img src="{{ isset(Auth::user()->photo) ? cdnAsset(IMG_USER_VIEW_PATH,Auth::user()->photo) : Avatar::create(Auth::user()->first_name.' '.Auth::user()->last_name)->toBase64()}}" alt="{{__('main.user')}}">
                                             <span class="user-verified-badge position-absolute"><i class="fas fa-check"></i></span>
                                         </div>
-                                        <h6 class="navbar-user-name font-semi-bold font-18">{{Auth::user()->first_name}} {{Auth::user()->last_name}} </h6>
+                                        <h6 class="navbar-user-name font-semi-bold font-18">{{Auth::user()->first_name}} {{Auth::user()->last_name}} <span style="font-size:xx-small">{{Auth::user()->eth_address}}</span></h6>
                                     </div>
                                     <!-- Show If Wallet not connected after login -->
                                     <a href="{{route('my_wallets')}}" class="dropdown-item theme-button1 user-dropdown-nav-wallet">{{__('main.My-Wallet')}}</a>
@@ -117,8 +117,14 @@
                     </ul>
                 </div>
             </div>
+
         </div>
+
+
+
+
     </nav>
+
     <!-- Navigation -->
 </section>
 <!-- Desktop Menu End -->

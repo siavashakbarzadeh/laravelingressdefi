@@ -371,6 +371,7 @@ button:focus {
 .mint-address{
     background-color: var(--theme-color);
     padding: 3px 10px;
+    font-size: small;
     border-radius: 15px;
 }
 .mint-address:hover{
@@ -2076,6 +2077,7 @@ img.hero-star-img {
 /* Footer Widget */
 .footer-about img, .footer-widget > h6 {
     margin-bottom: 30px;
+    max-width: 220px;
 }
 .footer-widget.footer-about p {
     font-size: 22px;

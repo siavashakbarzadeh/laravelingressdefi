@@ -41,7 +41,7 @@
                             <div class="profile-photo">
                                 <img src="{{ isset(Auth::user()->photo) ? cdnAsset(IMG_USER_VIEW_PATH,Auth::user()->photo) : Avatar::create(Auth::user()->first_name.' '.Auth::user()->last_name)->toBase64()}}" id="target1" alt="{{__('main.profile photo')}}">
                             </div>
-                            <h3 class="user-profile-edit-name">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</h3>
+                            <h3 class="user-profile-edit-name">{{Auth::user()->first_name}} {{Auth::user()->last_name}} <span style="font-size:small">{{Auth::user()->eth_address}}</span></h3>
                             <div class="user-profile-code font-14">{{Auth::user()->country}}</div>
                             <div class="custom-file-upload theme-button2">
                                 <div class="custom-file">
