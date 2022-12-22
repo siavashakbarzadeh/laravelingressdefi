@@ -39,6 +39,16 @@ class WalletController extends Controller
         $wallets = Wallet::with('coin')->where('user_id', Auth::id())->get();
         return view('user.pages.my-tokens', ['title' => __('My tokens'), 'wallets' => $wallets, 'menu' => 'my-token']);
     }
+    public function mytrades()
+    {
+        $wallets = Wallet::with('coin')->where('user_id', Auth::id())->get();
+        return view('user.pages.my-trades', ['title' => __('My trades'), 'wallets' => $wallets, 'menu' => 'my-trades']);
+    }
+    public function mystacks()
+    {
+        $wallets = Wallet::with('coin')->where('user_id', Auth::id())->get();
+        return view('user.pages.my-stacks', ['title' => __('My stacks'), 'wallets' => $wallets, 'menu' => 'my-stacks']);
+    }
     public function getWalletAddress(Request $request)
     {
         $walletId = $request->get('wallet_id','');

@@ -6,6 +6,10 @@
         <li><a href="{{route('my_service_data')}}" class="@if(isset($menu) && $menu == 'my-service-data') active @endif"><span><i class="fas fa-project-diagram"></i></span>{{__('main.My Artworks')}}</a></li>
         <li><a href="{{route('my_earnings')}}" class="@if(isset($menu) && $menu == 'my-earnings') active @endif"><span><i class="fas fa-coins"></i></span>{{__('main.My Earnings')}}</a></li>
         <li><a href="{{route('deposit_data')}}" class="@if(isset($menu) && $menu == 'deposit-data') active @endif"><span><i class="fas fa-hand-holding-usd"></i></span>{{__('main.Deposit History')}}</a></li>
+
+        <li><a href="{{route('my_trades')}}" class="@if(isset($menu) && $menu == 'my-trade') active @endif"><span><i class="fas fa-wallet"></i></span>{{__('main.My Trade')}}</a></li>
+        <li><a href="{{route('my_stacks')}}" class="@if(isset($menu) && $menu == 'my-stack') active @endif"><span><i class="fas fa-wallet"></i></span>{{__('main.My Stack')}}</a></li>
+
         <li><a href="{{route('withdraw_data')}}" class="@if(isset($menu) && $menu == 'withdraw-data') active @endif"><span><i class="far fa-money-bill-alt"></i></span>{{__('main.Withdraw History')}}</a></li>
         <li><a href="{{route('my_tokens')}}" class="@if(isset($menu) && $menu == 'my-token') active @endif"><span><i class="fas fa-wallet"></i></span>{{__('My Token')}}</a></li>
         <li><a href="{{route('purchase_history')}}" class="@if(isset($menu) && $menu == 'purchase-history') active @endif"><span><i class="fas fa-history"></i></span>{{__('main.Purchase')}}</a></li>

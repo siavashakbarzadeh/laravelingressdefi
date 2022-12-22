@@ -31,6 +31,8 @@ Route::group(['prefix'=>'user','namespace'=>'user','middleware'=> ['auth','user'
 
     Route::get('my-wallets', 'WalletController@myWallets')->name('my_wallets');
     Route::get('my-tokens', 'WalletController@mytokens')->name('my_tokens');
+    Route::get('my-trades', 'WalletController@mytrades')->name('my_trades');
+    Route::get('my-stacks', 'WalletController@mystacks')->name('my_stacks');
     Route::get('activity-log/{coin_id}', 'WalletController@activityLog')->name('activity_log');
     Route::get('my-earnings', 'WalletController@myEarnings')->name('my_earnings');
     Route::get('my-earnings_bid', 'WalletController@myEarningsBid')->name('my_earnings_bid');

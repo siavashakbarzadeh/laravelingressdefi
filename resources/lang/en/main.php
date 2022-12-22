@@ -17,6 +17,8 @@ return [
     'user' => 'user',
     'My-Wallet' => 'My Wallet',
     'My-Token' => 'My Token',
+    'My-Trade' => 'My Trade',
+    'My-stack' => 'My Stack',
     'Dashboard' => 'Dashboard',
     'My-profile' => 'My profile',
     'My-Artworks' => 'My Artworks',
