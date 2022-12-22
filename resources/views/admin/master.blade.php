@@ -138,7 +138,15 @@
                         <a href="{{route('admin_wallet_list')}}" class="nav-link @if(isset($menu) && $menu == 'wallet') active @endif">
                             <i class="nav-icon fas fa-wallet"></i>
                             <p>
-                                {{__('Wallet')}}
+                                {{__('WalletOfCoin')}}
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item @if(isset($menu) && $menu == 'token') menu-open @endif">
+                        <a href="{{route('admin_token_list')}}" class="nav-link @if(isset($menu) && $menu == 'token') active @endif">
+                            <i class="nav-icon fas fa-wallet"></i>
+                            <p>
+                                {{__('WalletOfToken')}}
                             </p>
                         </a>
                     </li>

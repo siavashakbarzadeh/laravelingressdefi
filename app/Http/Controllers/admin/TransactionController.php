@@ -37,6 +37,18 @@ class TransactionController extends Controller
         }
         return view('admin.users.wallet',$data);
     }
+    public function adminTokenList(Request $request)
+    {
+        $data['title'] = __('Token List');
+//        if($request->ajax()){
+//            $data['wallets'] = Wallet::join('users','users.id','=','wallets.user_id')
+//                ->join('coins','coins.id','=','wallets.coin_id');
+//            return datatables()->of($data['wallets'])
+//                ->addColumn('user_name',function ($item){return $item->first_name.' '.$item->last_name;})
+//                ->make(true);
+//        }
+        return view('admin.users.token',$data);
+    }
 
     /**
      * @param Request $request

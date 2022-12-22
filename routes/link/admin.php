@@ -18,6 +18,7 @@ Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=> ['auth','adm
     Route::get('deleted-users', 'UserController@adminDeletedUser')->name('admin_deleted_user')->middleware('isDemo.admin');
 
     Route::get('wallet-list', 'TransactionController@adminWalletList')->name('admin_wallet_list');
+    Route::get('token-list', 'TransactionController@adminTokenList')->name('admin_token_list');
     Route::get('deposit-history', 'TransactionController@depositHistory')->name('deposit_history');
 
     Route::get('pending-withdrawal', 'TransactionController@adminPendingWithdrawal')->name('admin_pending_withdrawal');
