@@ -236,7 +236,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header p-0">
-                    <h4 class="modal-title" id="purchase1ModalLabel">{{__('menu.Checkout')}}</h4>
+                    <h4 class="modal-title" id="purchase1ModalLabel">{{__('Main.Checkout')}}</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -249,20 +249,20 @@
                                 <div class="loader-circle"></div>
                             </div>
                             <div class=" purchasing-process-right">
-                                <h6 class="steps__info">{{__('menu.Purchasing')}}</h6>
-                                <div class="steps__text">{{__('menu.send-transaction-text')}}</div>
+                                <h6 class="steps__info">{{__('Main.Purchasing')}}</h6>
+                                <div class="steps__text">{{__('Main.send-transaction-text')}}</div>
                             </div>
                         </div>
                         <div id="checkout-event" class="ajax-alert">
                             @if ($service->type == 1)
-                                <p class="preview-inner-modal-info">{{__('menu.You-have-to-pay ').visual_number_format($service->price_dollar).__(' USD')}}</p>
+                                <p class="preview-inner-modal-info">{{__('You have to pay ').visual_number_format($service->price_dollar).__(' USD')}}</p>
                                 {{Form::open(['route' => 'user_product_purchase', 'files' => true, 'data-handler'=>"showMessage" ,'class' => 'ajax'])}}
                             @elseif($service->type == 2)
                                 {{Form::open(['route' => 'user_product_bid', 'files' => true, 'data-handler'=>"showMessage" ,'class' => 'ajax'])}}
                             @endif
                                 <input type="hidden" value="{{$service->id}}" name="service_id" id="service_id">
                                 <input type="hidden" value="{{Auth::id()}}" name="user_id" id="user_id">
-                                <input type="hidden" name="coin_type" id="coin_type">
+                                <input type="hidden"  name="coin_type" id="coin_type">
                                 <input type="hidden" name="coin_id" id="coin_id">
                                 <input type="hidden" name="conversion_rate" id="conversion_rate">
                                 <input type="hidden" name="coin_amount" id="on_balance">
