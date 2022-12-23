@@ -3,6 +3,14 @@
 return [
 
     'Discover' => 'Discover',
+    'Your-balance' => 'Your balance',
+    'Product-Price' => 'Product Price',
+    'select-coin' => 'select-coin',
+    'I-understand-continue' => 'I understand continue',
+    'Cancel' => 'Cancel',
+    'Coin' => 'Coin',
+    'Service-fee' => 'Service fee',
+    'You-have-to-pay' => 'You have to pay',
     'How-It-Works' => 'How It Works',
     'News' => 'News',
     'Upload' => 'Upload',

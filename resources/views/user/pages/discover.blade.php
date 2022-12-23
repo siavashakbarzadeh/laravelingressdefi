@@ -137,7 +137,7 @@
                                             <a href="{{route('product_view', encrypt($st->id))}}"><h5 class="font-semi-bold">{{$st->title}}</h5></a>
                                             <div class="explore-small-box explore-author-wrap d-flex align-items-center justify-content-between">
                                                 <div class="explore-author d-flex align-items-center">
-                                                    <img src="{{is_null($st->author->photo) ? Avatar::create($st->author->first_name.' '.$st->author->last_name)->toBase64() : cdnAsset(IMG_USER_PATH,$st->author->photo)}}" alt="{{__('amain.vatar')}}">
+                                                    <img src="{{is_null($st->author->photo) ? Avatar::create($st->author->first_name.' '.$st->author->last_name)->toBase64() : cdnAsset(IMG_USER_PATH,$st->author->photo)}}" alt="{{__('main.avatar')}}">
                                                     <p class="ml-2">{{__('main.By')}} <span>{{$st->author->first_name.' '.$st->author->last_name}}</span></p>
                                                 </div>
                                                 <div class="like-box">

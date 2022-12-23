@@ -182,10 +182,28 @@
                                                 <div class="timer-down-wrap"><span class="minutes">{{__('35')}}</span><span class="timing-title">{{__('main.Min')}}</span></div>
                                                 <div class="timer-down-wrap"><span class="seconds">{{__('54')}}</span><span class="timing-title">{{__('main.Sec')}}</span></div>
                                             </div>
+
                                         </div>
                                         <!-- Countdown box end -->
                                     </div>
+
                                 </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col col-6">
+{{--                                        https://api.qrserver.com/v1/create-qr-code/?data=URL--}}
+
+
+                                        {{--                                        encrypt($service->id)--}}
+{{--                                       @dd(encrypt($service->id))--}}
+{{--                                       @dd($service->id)                --}}
+                                        <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8000/product/view/eyJpdiI6IjhKc3IxeW01Uzk2TmQ1S3docW5vTVE9PSIsInZhbHVlIjoibjliMDk2eFpjQkxQdEI3TUd3Y2dTQT09IiwibWFjIjoiNTZjMWU3OTAzZTVlNTc0MThiNDYyZmYyOTdjOTJkMTVkZWQxNjIyMjFhZDc2Y2QyZGJmMmUyNGMwMGM4OGI4NiJ9" alt="">
+{{--                                        <img src="{{cdnAsset(IMG_SERVICE_PATH,$service->thumbnail)}}" alt="{{__('main.item')}}">--}}
+                                    </div>
+                                </div>
+                            </div>
+
+
                             @elseif($service->type == 2)
                                 <div class="col-12 col-md-12 col-lg-5">
                                     <div class="main-item-content-part">
